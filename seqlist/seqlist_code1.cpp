@@ -1,18 +1,20 @@
 #include<iostream>
 #define MAXSIZE 100
 using namespace std;
-
 typedef int ElemType ;
+//顺序表结构体
 typedef struct {
     int *data;
     int length;
 }Sqlist;
+//初始化顺序表
 Sqlist *initList(){
 	Sqlist *L=new Sqlist ;
 	L->data=new int[MAXSIZE];
 	L->length=0;
 	return L;
 }
+//最后位添加元素
 bool addList(Sqlist *L,int elm){
 	if(L->length>=MAXSIZE){
 		cout<<"Positions Overflow "<<endl;
@@ -22,6 +24,7 @@ bool addList(Sqlist *L,int elm){
 	L->length++;
 	return true;
 }
+//插入元素
 bool insertList(Sqlist *L,int position,int elm){
 	if(L->length>=MAXSIZE){
 		cout<<"Positions Overflow "<<endl;
@@ -38,7 +41,7 @@ bool insertList(Sqlist *L,int position,int elm){
 	L->length++;
 	return true;
 } 
-
+//删除元素
 bool deleteList(Sqlist *l,int position){
     if(l->length<1){
     	cout<<"empty list"<<endl;
@@ -54,7 +57,7 @@ bool deleteList(Sqlist *l,int position){
 	l->length--;
 	return true;
 }
-
+//改变元素
 bool changeList(Sqlist *l,int position,int elm){
 	if(position>l->length||position<1){
 		cout<<"Overflow action"<<endl;
@@ -63,6 +66,7 @@ bool changeList(Sqlist *l,int position,int elm){
 	l->data[position-1]=elm;
 	return true;
 }
+//查找元素
 int findList(Sqlist *l,int elm){
 	if(l->length<1){
 		cout<<"empty list"<<endl;
@@ -77,6 +81,7 @@ int findList(Sqlist *l,int elm){
 	cout<<"Not find"<<endl;
 	return 0;
 }
+//遍历输出列表
 bool coutList(Sqlist *l){
 	if(l->length<1){
 		cout<<"empty list"<<endl;
@@ -89,6 +94,7 @@ bool coutList(Sqlist *l){
 	cout<<endl;
 	return true;
 }
+//主函数
 int main(){
 	Sqlist *list1=initList();
 	insertList(list1,1,12);
@@ -97,7 +103,7 @@ int main(){
 	findList(list1,13);
 	coutList(list1);
 	
-	//delete
+	//删除释放空间
 	delete[] list1->data;
     delete list1;
     list1 = nullptr;
