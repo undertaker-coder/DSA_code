@@ -1,3 +1,5 @@
+//                        顺序表及其基本操作代码
+//************************ Edited by 486desu *********************//
 #include<iostream>
 #define MAXSIZE 100
 using namespace std;
