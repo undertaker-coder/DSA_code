@@ -105,6 +105,3 @@ void afterReserve(bitree t){
   参数修饰得越严格，函数能造成的副作用就越小，越不容易出 bug。
 
 */
-
-
-
