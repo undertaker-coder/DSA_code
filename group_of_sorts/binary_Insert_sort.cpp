@@ -1,4 +1,4 @@
-//                       二分查找及其基本操作代码
+//                       二分查找排序及其基本操作代码
 //************************ Edited by 486desu *********************//
 #include<iostream>
 using namespace std;
