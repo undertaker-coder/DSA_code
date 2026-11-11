@@ -28,7 +28,7 @@ void binarySort(int *a,int len){
             a[j+1]=a[j];
         }//挪出空间存放新值
 
-        a[k]=tmp;
+        a[k]=tmp;//插入新值
     }
     return;
 }
