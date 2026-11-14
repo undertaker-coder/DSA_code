@@ -41,7 +41,7 @@ bool addQueue(queue *q,elmtype elm){
 		cout<<"Full queue"<<endl;
 		return false;
 	}
-	q->data[q->tail]=elm;
+	q->data[q->tail]=elm;//尾加
 	q->tail=(q->tail+1)%MAXSIZE;
 	return true;
 }
@@ -51,7 +51,7 @@ bool giveQueue(queue *q,elmtype *e){
 		cout<<"Empty queue"<<endl;
 		return false;
 	}
-	*e=q->data[q->head];
+	*e=q->data[q->head];//头出
 	q->head=(q->head+MAXSIZE+1)%MAXSIZE;
 	return true;
 }
