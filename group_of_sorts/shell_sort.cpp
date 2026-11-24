@@ -52,3 +52,6 @@ int main(){
     printList(a,len);
     return 0;
 }
+
+
+//注：希尔排序只能采用插入排序，而非折半插入排序（因为gap内部数据是无序的）
