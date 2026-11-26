@@ -1,3 +1,5 @@
+//                       邻接表及其基本操作代码
+//************************ Edited by 486desu *********************//
 #include<iostream>
 #define MAX 100
 using namespace std;

@@ -1,3 +1,5 @@
+//                       邻接矩阵其基本操作代码（无向图）
+//************************ Edited by 486desu *********************//
 #include<iostream>
 #define MAX 100
 using namespace std;
